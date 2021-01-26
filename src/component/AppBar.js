@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 
-const drawerWidth = 300;
+const drawerWidth = 280;
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -20,7 +20,7 @@ export default function MyAppBar() {
     <AppBar position="fixed" className={classes.appBar}>
       <Toolbar>
         <Typography variant="h6" noWrap>
-          Home
+          Item Mater Message
         </Typography>
       </Toolbar>
     </AppBar>
