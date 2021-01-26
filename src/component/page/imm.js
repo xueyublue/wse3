@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, TextField } from "@material-ui/core";
+import { Button, Divider, TextField } from "@material-ui/core";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -8,12 +8,20 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import AddIcon from "@material-ui/icons/Add";
+import ClearAllIcon from "@material-ui/icons/ClearAll";
+import TelegramIcon from "@material-ui/icons/Telegram";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  form: {
     "& > *": {
       margin: theme.spacing(1),
       width: "30ch",
+    },
+  },
+  buttons: {
+    "& > *": {
+      margin: theme.spacing(1),
     },
   },
   table: {
@@ -38,26 +46,34 @@ export default function IMM() {
 
   return (
     <div>
-      <form className={classes.root} noValidate autoComplete="off">
+      <form className={classes.form} noValidate autoComplete="off">
         <TextField variant="outlined" label="Message ID" size="small" />
       </form>
-      <form className={classes.root} noValidate autoComplete="off">
+      <Divider />
+      <form className={classes.form} noValidate autoComplete="off">
         <TextField variant="outlined" label="Sequence No" size="small" />
         <TextField variant="outlined" label="Item Code" size="small" />
         <TextField variant="outlined" label="Item Name" size="small" />
         <TextField variant="outlined" label="Soft Zone" size="small" />
       </form>
-      <Button variant="outlined" color="primary">
-        Add Detail (F2)
-      </Button>
-      <Button variant="outlined" color="primary">
-        Send (F4)
-      </Button>
-      <p></p>
-      <Button variant="outlined" color="secondary">
-        Clear All (F9)
-      </Button>
-      <p></p>
+      <Divider />
+      <div className={classes.buttons}>
+        <Button variant="outlined" color="primary" size="small">
+          <AddIcon />
+          Add Detail (F2)
+        </Button>
+        <Button variant="outlined" color="secondary" size="small">
+          <ClearAllIcon /> Clear All (F9)
+        </Button>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="small"
+          style={{ float: "right" }}
+        >
+          <TelegramIcon /> Send (F4)
+        </Button>
+      </div>
       <TableContainer component={Paper}>
         <Table
           className={classes.table}
