@@ -66,23 +66,30 @@ export default function IMM() {
         </Grid>
       </Grid>
       <Divider />
-      <div className={classes.buttons}>
-        <Button variant="outlined" color="primary" size="small">
-          <AddIcon />
-          Add Detail (F2)
-        </Button>
-        <Button variant="outlined" color="secondary" size="small">
-          <ClearAllIcon /> Clear All (F9)
-        </Button>
-        <Button
-          variant="outlined"
-          color="primary"
-          size="small"
-          style={{ float: "right" }}
-        >
-          <TelegramIcon /> Send (F4)
-        </Button>
-      </div>
+      <Grid container spacing={2} className={classes.container}>
+        <Grid item xs={12}>
+          <Button
+            variant="outlined"
+            color="primary"
+            size="small"
+            style={{ marginRight: 5 }}
+          >
+            <AddIcon />
+            Add Detail (F2)
+          </Button>
+          <Button variant="outlined" color="secondary" size="small">
+            <ClearAllIcon /> Clear All (F9)
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            size="small"
+            style={{ float: "right" }}
+          >
+            <TelegramIcon /> Send (F4)
+          </Button>
+        </Grid>
+      </Grid>
       <Grid container spacing={2} className={classes.container}>
         <Grid item xs={12}>
           <TableContainer component={Paper}>
