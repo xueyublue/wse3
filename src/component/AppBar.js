@@ -17,7 +17,7 @@ export default function MyAppBar() {
   const classes = useStyles();
 
   return (
-    <AppBar position="fixed" className={classes.appBar}>
+    <AppBar position="fixed" className={classes.appBar} color="default">
       <Toolbar>
         <Typography variant="h6" noWrap>
           Item Mater Message

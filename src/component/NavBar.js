@@ -11,6 +11,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import SettingsIcon from "@material-ui/icons/Settings";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import Toolbar from "@material-ui/core/Toolbar";
+import { Typography } from "@material-ui/core";
 
 const drawerWidth = 280;
 
@@ -44,7 +45,7 @@ export default function NavBar() {
     >
       <div className={classes.toolbar}>
         <Toolbar>
-          <TelegramIcon color="primary" fontSize="large" />
+          <Typography>WSE 3.0</Typography>
         </Toolbar>
       </div>
       <Divider />
