@@ -44,17 +44,8 @@ export default function NavBar() {
       anchor="left"
     >
       <div className={classes.toolbar}>
-        <Toolbar>
-          <Typography>WSE 3.0</Typography>
-        </Toolbar>
+        <Toolbar></Toolbar>
       </div>
-      <Divider />
-      <ListItem button key={"Home"}>
-        <ListItemIcon>
-          <HomeIcon />
-        </ListItemIcon>
-        <ListItemText primary={"Home"} />
-      </ListItem>
       <Divider />
       <List>
         {["Item Master", "Storage Plan", "Picking Plan", "Stock Take"].map(
@@ -68,7 +59,6 @@ export default function NavBar() {
           )
         )}
       </List>
-      <Divider />
       <Divider />
       <List>
         {[
