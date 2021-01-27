@@ -4,6 +4,7 @@ import ItemMasterSender from "./sender/ItemMasterSender";
 import StoragePlanSender from "./sender/StoragePlanSender";
 import PickingPlanSender from "./sender/PickingPlanSender";
 import StockTakeSender from "./sender/StockTakeSender";
+import Home from "./Home";
 
 const useStyles = makeStyles((theme) => ({
   // necessary for content to be below app bar
@@ -22,6 +23,7 @@ export default function Container({ location }) {
   return (
     <main className={classes.content}>
       <div className={classes.toolbar} />
+      {path === "/" || path === "/home" ? <Home /> : null}
       {path === "/sender/imm" ? <ItemMasterSender /> : null}
       {path === "/sender/spm" ? <StoragePlanSender /> : null}
       {path === "/sender/ppm" ? <PickingPlanSender /> : null}

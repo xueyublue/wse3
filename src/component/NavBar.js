@@ -7,11 +7,10 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import TelegramIcon from "@material-ui/icons/Telegram";
-import HomeIcon from "@material-ui/icons/Home";
 import SettingsIcon from "@material-ui/icons/Settings";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import Toolbar from "@material-ui/core/Toolbar";
-import { Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -48,16 +47,38 @@ export default function NavBar() {
       </div>
       <Divider />
       <List>
-        {["Item Master", "Storage Plan", "Picking Plan", "Stock Take"].map(
-          (text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                <TelegramIcon />
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          )
-        )}
+        <ListItem button key={"Item Master Message"}>
+          <ListItemIcon>
+            <TelegramIcon />
+          </ListItemIcon>
+          <Link to="/sender/imm">
+            <ListItemText primary={"Item Master Message"} />
+          </Link>
+        </ListItem>
+        <ListItem button key={"Storage Plan Message"}>
+          <ListItemIcon>
+            <TelegramIcon />
+          </ListItemIcon>
+          <Link to="/sender/spm">
+            <ListItemText primary={"Storage Plan Message"} />
+          </Link>
+        </ListItem>
+        <ListItem button key={"Picking Plan Message"}>
+          <ListItemIcon>
+            <TelegramIcon />
+          </ListItemIcon>
+          <Link to="/sender/ppm">
+            <ListItemText primary={"Picking Plan Message"} />
+          </Link>
+        </ListItem>
+        <ListItem button key={"Stock Take Message"}>
+          <ListItemIcon>
+            <TelegramIcon />
+          </ListItemIcon>
+          <Link to="/sender/stm">
+            <ListItemText primary={"Stock Take Message"} />
+          </Link>
+        </ListItem>
       </List>
       <Divider />
       <List>
