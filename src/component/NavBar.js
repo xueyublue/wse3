@@ -13,7 +13,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import Toolbar from "@material-ui/core/Toolbar";
 import { Typography } from "@material-ui/core";
 
-const drawerWidth = 280;
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
