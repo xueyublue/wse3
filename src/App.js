@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import AppBar from "./component/AppBar";
 import NavBar from "./component/NavBar";
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const classes = useStyles();
+  const counter = useSelector((state) => state.counter);
 
   return (
     <ThemeProvider theme={theme}>
@@ -24,6 +26,7 @@ export default function App() {
         <div className={classes.root}>
           <CssBaseline />
           <AppBar />
+          {counter}
           <NavBar />
           <Switch>
             <Route path="/" component={Container} />
