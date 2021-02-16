@@ -12,7 +12,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import Toolbar from "@material-ui/core/Toolbar";
 import { Link } from "react-router-dom";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -47,47 +47,42 @@ export default function NavBar() {
       </div>
       <Divider />
       <List>
-        <ListItem button key={"Item Master Message"}>
+        <ListItem button key={"Item Master"}>
           <ListItemIcon>
             <TelegramIcon />
           </ListItemIcon>
           <Link to="/sender/imm">
-            <ListItemText primary={"Item Master Message"} />
+            <ListItemText primary={"Item Master"} />
           </Link>
         </ListItem>
-        <ListItem button key={"Storage Plan Message"}>
+        <ListItem button key={"Storage Plan"}>
           <ListItemIcon>
             <TelegramIcon />
           </ListItemIcon>
           <Link to="/sender/spm">
-            <ListItemText primary={"Storage Plan Message"} />
+            <ListItemText primary={"Storage Plan"} />
           </Link>
         </ListItem>
-        <ListItem button key={"Picking Plan Message"}>
+        <ListItem button key={"Picking Plan"}>
           <ListItemIcon>
             <TelegramIcon />
           </ListItemIcon>
           <Link to="/sender/ppm">
-            <ListItemText primary={"Picking Plan Message"} />
+            <ListItemText primary={"Picking Plan"} />
           </Link>
         </ListItem>
-        <ListItem button key={"Stock Take Message"}>
+        <ListItem button key={"Stock Take"}>
           <ListItemIcon>
             <TelegramIcon />
           </ListItemIcon>
           <Link to="/sender/stm">
-            <ListItemText primary={"Stock Take Message"} />
+            <ListItemText primary={"Stock Take"} />
           </Link>
         </ListItem>
       </List>
       <Divider />
       <List>
-        {[
-          "Database Maintenance",
-          "User Maintenance",
-          "Terminal Maintenance",
-          "Message Query",
-        ].map((text, index) => (
+        {["Database", "Users", "Terminals", "Messages"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <SettingsIcon /> : <SettingsIcon />}
